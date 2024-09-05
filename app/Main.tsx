@@ -22,7 +22,6 @@ export default function Home({ posts }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
-            console.log('inspect.posts', date, siteMetadata.locale, formatDate(date, siteMetadata.locale))
             return (
               <li key={slug} className="py-12">
                 <article>
